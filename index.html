@@ -1,0 +1,2257 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEXORA 2026 — Technology, Creativity &amp; Innovation Conference</title>
+    <!-- Kode Favicon -->
+    <link rel="icon" type="image/x-icon" href="NEXORA.png">
+    <meta name="description" content="NEXORA 2026 is a one-day technology, creativity, and innovation conference in Palembang. Connect Ideas. Create Impact.">
+    <!-- Google Fonts: Plus Jakarta Sans & Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+      :root {
+        --bg-main: #FDFBF7;
+        --bg-surface: #FFFFFF;
+        --bg-card: #F3EEE5;
+        --bg-card-hover: #E8F3EF;
+        --border-subtle: #D8E4DE;
+        --border-active: #0D9488;
+
+        --text-headline: #064E3B;
+        --text-body: #355C50;
+        --text-muted: #6B7F77;
+
+        --accent-amber: #D97706;
+        --accent-amber-light: #B45309;
+        --accent-amber-glow: rgba(217, 119, 6, 0.18);
+
+        --accent-blue: #0D9488;
+        --accent-blue-light: #0F766E;
+        --accent-blue-glow: rgba(13, 148, 136, 0.16);
+
+        --badge-bg: rgba(217, 119, 6, 0.12);
+        --badge-border: rgba(217, 119, 6, 0.3);
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        background-color: var(--bg-main);
+        color: var(--text-headline);
+        line-height: 1.65;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        background-image:
+          radial-gradient(ellipse 60% 40% at 50% 0%, rgba(13, 148, 136, 0.08), transparent 70%),
+          radial-gradient(ellipse 50% 30% at 85% 45%, rgba(217, 119, 6, 0.08), transparent 60%);
+      }
+
+      h1, h2, h3, h4, .font-heading {
+        font-family: 'Space Grotesk', sans-serif;
+        letter-spacing: -0.02em;
+      }
+
+      /* Container Utility */
+      .container {
+        width: 100%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 24px;
+      }
+
+      /* Navigation */
+      header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 100;
+        background: rgba(253, 251, 247, 0.9);
+        backdrop-filter: blur(14px);
+        -webkit-backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border-subtle);
+        transition: background-color 0.3s ease;
+      }
+
+      .nav-inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 76px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        text-decoration: none;
+        color: var(--text-headline);
+        font-weight: 800;
+        font-size: 1.25rem;
+        letter-spacing: -0.01em;
+      }
+
+      .brand-mark {
+        width: 38px;
+        height: 38px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--accent-amber), var(--accent-blue));
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+        font-weight: 800;
+        font-size: 1rem;
+        box-shadow: 0 4px 14px rgba(13, 78, 59, 0.18);
+      }
+
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        list-style: none;
+      }
+
+      .nav-link {
+        color: var(--text-body);
+        font-size: 0.92rem;
+        font-weight: 500;
+        text-decoration: none;
+        transition: color 0.2s ease;
+        position: relative;
+        padding: 6px 0;
+      }
+
+      .nav-link:hover, .nav-link.active {
+        color: var(--text-headline);
+      }
+
+      .nav-link.active::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: var(--accent-amber);
+        border-radius: 2px;
+      }
+
+      .nav-cta {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      /* Buttons */
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 600;
+        font-size: 0.94rem;
+        padding: 12px 26px;
+        border-radius: 9999px;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+        border: 1px solid transparent;
+      }
+
+      .btn-primary {
+        background: var(--accent-blue);
+        color: #FFFFFF;
+        box-shadow: 0 4px 18px rgba(13, 148, 136, 0.24);
+      }
+
+      .btn-primary:hover {
+        background: #0F766E;
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(13, 148, 136, 0.24);
+      }
+
+      .btn-secondary {
+        background: transparent;
+        color: var(--text-headline);
+        border: 1px solid var(--border-subtle);
+      }
+
+      .btn-secondary:hover {
+        background: var(--bg-card-hover);
+        border-color: var(--border-active);
+        transform: translateY(-2px);
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: 1px solid var(--border-subtle);
+        color: var(--text-headline);
+        padding: 8px 12px;
+        border-radius: 8px;
+        cursor: pointer;
+        font-size: 1.1rem;
+      }
+
+      /* Centered Hero Section */
+      .hero-section {
+        padding-top: 170px;
+        padding-bottom: 96px;
+        text-align: center;
+        position: relative;
+      }
+
+      .eyebrow-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: var(--badge-bg);
+        border: 1px solid var(--badge-border);
+        color: var(--accent-amber-light);
+        padding: 6px 16px;
+        border-radius: 9999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.07em;
+        margin-bottom: 24px;
+      }
+
+      .hero-title {
+        font-size: clamp(3.2rem, 7vw, 5.5rem);
+        line-height: 1.05;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: var(--text-headline);
+      }
+
+      .hero-tagline {
+        font-size: clamp(1.2rem, 2.4vw, 1.6rem);
+        color: var(--accent-blue-light);
+        font-weight: 600;
+        margin-bottom: 16px;
+        letter-spacing: -0.01em;
+      }
+
+      .hero-meta {
+        display: inline-flex;
+        align-items: center;
+        gap: 20px;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        padding: 10px 22px;
+        border-radius: 9999px;
+        color: var(--text-body);
+        font-size: 0.95rem;
+        font-weight: 500;
+        margin-bottom: 34px;
+      }
+
+      .hero-meta span {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .hero-meta .dot {
+        width: 4px;
+        height: 4px;
+        background: var(--text-muted);
+        border-radius: 50%;
+      }
+
+      .hero-cta-group {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 48px;
+        flex-wrap: wrap;
+      }
+
+      /* Hero Countdown Box */
+      .hero-countdown-wrapper {
+        max-width: 680px;
+        margin: 0 auto 52px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: 24px;
+        padding: 30px 28px;
+        box-shadow: 0 20px 40px -10px rgba(0, 0, 0, 0.45);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .hero-countdown-wrapper::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-amber), var(--accent-blue), transparent);
+      }
+
+      .countdown-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 22px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+      }
+
+      .countdown-title {
+        font-size: 0.85rem;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 700;
+        color: var(--text-body);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .live-pulse {
+        width: 8px;
+        height: 8px;
+        background: var(--accent-amber);
+        border-radius: 50%;
+        box-shadow: 0 0 10px var(--accent-amber);
+        animation: pulse 2s infinite;
+      }
+
+      @keyframes pulse {
+        0%, 100% { opacity: 1; transform: scale(1); }
+        50% { opacity: 0.4; transform: scale(1.3); }
+      }
+
+      .countdown-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px;
+      }
+
+      .time-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 16px 8px 12px;
+        text-align: center;
+      }
+
+      .time-num {
+        display: block;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: clamp(2rem, 3.8vw, 3rem);
+        font-weight: 700;
+        color: var(--text-headline);
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      .time-label {
+        font-size: 0.72rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: var(--text-muted);
+        font-weight: 600;
+      }
+
+      /* Stat Highlights */
+      .hero-stats {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+        max-width: 880px;
+        margin: 0 auto;
+        border-top: 1px solid var(--border-subtle);
+        padding-top: 40px;
+      }
+
+      .stat-item {
+        text-align: center;
+      }
+
+      .stat-number {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        color: var(--text-headline);
+        display: block;
+        line-height: 1.1;
+      }
+
+      .stat-desc {
+        color: var(--text-body);
+        font-size: 0.85rem;
+        font-weight: 500;
+      }
+
+      /* Sections Common */
+      section {
+        padding: 96px 0;
+        position: relative;
+      }
+
+      .section-header {
+        text-align: center;
+        max-width: 680px;
+        margin: 0 auto 56px;
+      }
+
+      .section-title {
+        font-size: clamp(2.1rem, 3.5vw, 2.9rem);
+        font-weight: 700;
+        color: var(--text-headline);
+        margin-top: 12px;
+        margin-bottom: 16px;
+      }
+
+      .section-subtitle {
+        color: var(--text-body);
+        font-size: 1.05rem;
+      }
+
+      /* About Section */
+      .about-split {
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        gap: 32px;
+        align-items: center;
+      }
+
+      .editorial-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 20px;
+        padding: 40px;
+        position: relative;
+      }
+
+      .about-quote {
+        font-size: 1.35rem;
+        font-weight: 600;
+        color: var(--text-headline);
+        line-height: 1.5;
+        margin-bottom: 22px;
+        border-left: 3px solid var(--accent-amber);
+        padding-left: 20px;
+      }
+
+      .about-text {
+        color: var(--text-body);
+        margin-bottom: 18px;
+        font-size: 1rem;
+      }
+
+      .feature-points {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .feature-point-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        padding: 20px;
+        border-radius: 16px;
+      }
+
+      .feature-point-icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 12px;
+        background: rgba(13, 148, 136, 0.12);
+        color: var(--accent-blue-light);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        flex-shrink: 0;
+      }
+
+      .feature-point-text h4 {
+        font-size: 1.05rem;
+        color: #D97706;
+        margin-bottom: 4px;
+      }
+
+      .feature-point-text p {
+        color: var(--text-body);
+        font-size: 0.88rem;
+        margin: 0;
+      }
+
+      /* Experience Grid */
+      .experience-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .experience-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 20px;
+        padding: 32px 24px;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .experience-card:hover {
+        background: var(--bg-card);
+        border-color: var(--border-active);
+        transform: translateY(-4px);
+      }
+
+      .exp-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin-bottom: 24px;
+      }
+
+      .experience-card:nth-child(1) .exp-icon { color: var(--accent-blue); background: rgba(13, 148, 136, 0.1); }
+      .experience-card:nth-child(2) .exp-icon { color: var(--accent-amber); background: rgba(217, 119, 6, 0.12); }
+      .experience-card:nth-child(3) .exp-icon { color: var(--accent-blue); background: rgba(13, 148, 136, 0.12); }
+      .experience-card:nth-child(4) .exp-icon { color: var(--accent-amber); background: rgba(217, 119, 6, 0.12); }
+
+      .experience-card h4 {
+        font-size: 1.25rem;
+        color: #D97706;
+        margin-bottom: 12px;
+      }
+
+      .experience-card p {
+        color: var(--text-body);
+        font-size: 0.92rem;
+        line-height: 1.6;
+        flex-grow: 1;
+      }
+
+      /* Speakers Section with Filter */
+      .filter-bar {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 40px;
+        flex-wrap: wrap;
+      }
+
+      .filter-btn {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-body);
+        padding: 8px 20px;
+        border-radius: 9999px;
+        font-size: 0.88rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .filter-btn:hover {
+        color: var(--text-headline);
+        border-color: var(--border-active);
+      }
+
+      .filter-btn.active {
+        background: var(--accent-amber);
+        color: #0F172A;
+        border-color: var(--accent-amber);
+      }
+
+      .speaker-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .speaker-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 20px;
+        padding: 28px 22px;
+        text-align: center;
+        transition: all 0.3s ease;
+      }
+
+      .speaker-card:hover {
+        background: var(--bg-card);
+        border-color: var(--border-active);
+        transform: translateY(-4px);
+      }
+
+      .speaker-avatar {
+        width: 90px;
+        height: 90px;
+        border-radius: 24px;
+        margin: 0 auto 20px;
+        background: linear-gradient(135deg, var(--accent-blue), var(--text-headline));
+        border: 2px solid var(--border-subtle);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: #D97706;
+        position: relative;
+      }
+
+      .speaker-avatar-sw { background: linear-gradient(135deg, var(--text-headline), var(--accent-blue)); }
+      .speaker-avatar-rp { background: linear-gradient(135deg, var(--accent-amber), #F59E0B); }
+      .speaker-avatar-np { background: linear-gradient(135deg, var(--accent-blue-light), var(--accent-blue)); }
+      .speaker-avatar-am { background: linear-gradient(135deg, var(--text-headline), var(--accent-amber)); }
+
+      .speaker-domain {
+        display: inline-block;
+        font-size: 0.76rem;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+        font-weight: 700;
+        color: var(--accent-amber-light);
+        margin-bottom: 6px;
+      }
+
+      .speaker-name {
+        font-size: 1.2rem;
+        color: #D97706;
+        margin-bottom: 4px;
+      }
+
+      .speaker-title {
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        margin-bottom: 16px;
+      }
+
+      .speaker-topic-box {
+        background: var(--bg-card);
+        border: 1px solid var(--border-subtle);
+        border-radius: 12px;
+        padding: 12px;
+        font-size: 0.86rem;
+        color: var(--text-body);
+      }
+
+      .speaker-topic-box strong {
+        display: block;
+        color: var(--text-headline);
+        font-size: 0.8rem;
+        margin-bottom: 4px;
+        text-transform: uppercase;
+        letter-spacing: 0.04em;
+      }
+
+      /* Schedule Tabs Section */
+      .schedule-wrapper {
+        max-width: 840px;
+        margin: 0 auto;
+      }
+
+      .schedule-tabs {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 36px;
+      }
+
+      .tab-btn {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-body);
+        padding: 10px 24px;
+        border-radius: 12px;
+        font-weight: 600;
+        font-size: 0.92rem;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .tab-btn:hover {
+        color: #D97706;
+        border-color: var(--border-active);
+      }
+
+      .tab-btn.active {
+        background: var(--accent-blue);
+        color: #D97706;
+        border-color: var(--accent-blue);
+      }
+
+      .timeline-container {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .timeline-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        padding: 22px 26px;
+        display: flex;
+        align-items: center;
+        gap: 28px;
+        transition: all 0.2s ease;
+      }
+
+      .timeline-card:hover {
+        background: var(--bg-card);
+        border-color: var(--border-active);
+        transform: translateX(4px);
+      }
+
+      .timeline-time-col {
+        min-width: 100px;
+        text-align: right;
+        flex-shrink: 0;
+      }
+
+      .timeline-time-col .time {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 1.3rem;
+        font-weight: 700;
+        color: var(--accent-amber-light);
+        display: block;
+      }
+
+      .timeline-time-col .duration {
+        font-size: 0.78rem;
+        color: var(--text-muted);
+      }
+
+      .timeline-divider {
+        width: 2px;
+        height: 48px;
+        background: var(--border-subtle);
+      }
+
+      .timeline-content {
+        flex-grow: 1;
+      }
+
+      .timeline-content h4 {
+        font-size: 1.15rem;
+        color: #D97706;
+        margin-bottom: 4px;
+      }
+
+      .timeline-content p {
+        color: var(--text-body);
+        font-size: 0.88rem;
+        margin: 0;
+      }
+
+      .timeline-tag {
+        font-size: 0.72rem;
+        padding: 4px 10px;
+        border-radius: 6px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background: rgba(255, 255, 255, 0.05);
+        color: var(--text-muted);
+        display: inline-block;
+        margin-top: 6px;
+      }
+
+      /* Why Join NEXORA: 4 Pillars */
+      .pillar-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+      }
+
+      .pillar-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 20px;
+        padding: 36px 26px;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .pillar-card:hover {
+        background: var(--bg-card);
+        border-color: var(--border-active);
+        transform: translateY(-4px);
+      }
+
+      .pillar-card-num {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.06);
+        position: absolute;
+        top: 20px;
+        right: 24px;
+        line-height: 1;
+      }
+
+      .pillar-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 12px;
+        background: rgba(217, 119, 6, 0.12);
+        color: var(--accent-amber);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3rem;
+        margin-bottom: 22px;
+      }
+
+      .pillar-card h4 {
+        font-size: 1.3rem;
+        color: #D97706;
+        margin-bottom: 12px;
+      }
+
+      .pillar-card p {
+        color: var(--text-body);
+        font-size: 0.92rem;
+        line-height: 1.6;
+      }
+
+      /* Pricing / Registration */
+      .pricing-toggle-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 14px;
+        margin-bottom: 48px;
+        font-size: 0.92rem;
+        color: var(--text-body);
+      }
+
+      .toggle-switch {
+        position: relative;
+        display: inline-block;
+        width: 52px;
+        height: 28px;
+      }
+
+      .toggle-switch input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+      }
+
+      .slider {
+        position: absolute;
+        cursor: pointer;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        transition: .3s;
+        border-radius: 34px;
+      }
+
+      .slider:before {
+        position: absolute;
+        content: "";
+        height: 20px;
+        width: 20px;
+        left: 3px;
+        bottom: 3px;
+        background-color: #ffffff;
+        transition: .3s;
+        border-radius: 50%;
+      }
+
+      input:checked + .slider {
+        background-color: var(--accent-amber);
+        border-color: var(--accent-amber);
+      }
+
+      input:checked + .slider:before {
+        transform: translateX(24px);
+        background-color: var(--text-headline);
+      }
+
+      .discount-pill {
+        background: rgba(16, 185, 129, 0.15);
+        color: #34D399;
+        font-size: 0.76rem;
+        padding: 3px 8px;
+        border-radius: 6px;
+        font-weight: 700;
+      }
+
+      .pricing-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        align-items: stretch;
+      }
+
+      .ticket-card {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 24px;
+        padding: 40px 32px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        transition: all 0.3s ease;
+      }
+
+      .ticket-card:hover {
+        border-color: var(--border-active);
+        transform: translateY(-4px);
+      }
+
+      .ticket-card.featured {
+        background: var(--bg-card);
+        border: 2px solid var(--accent-amber);
+        box-shadow: 0 16px 36px -12px rgba(217, 119, 6, 0.24);
+        transform: translateY(-8px);
+      }
+
+      .ticket-badge {
+        position: absolute;
+        top: -14px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--accent-amber);
+        color: #0F172A;
+        font-size: 0.75rem;
+        font-weight: 800;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        padding: 4px 14px;
+        border-radius: 9999px;
+      }
+
+      .ticket-title {
+        font-size: 1.4rem;
+        color: #D97706;
+        margin-bottom: 8px;
+      }
+
+      .ticket-subtitle {
+        color: var(--text-muted);
+        font-size: 0.88rem;
+        margin-bottom: 24px;
+      }
+
+      .ticket-price-box {
+        margin-bottom: 28px;
+      }
+
+      .ticket-price {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #D97706;
+        line-height: 1;
+      }
+
+      .ticket-price small {
+        font-size: 0.95rem;
+        color: var(--text-muted);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-weight: 400;
+      }
+
+      .ticket-features {
+        list-style: none;
+        margin-bottom: 32px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .ticket-features li {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        color: var(--text-body);
+        font-size: 0.92rem;
+      }
+
+      .ticket-features li i {
+        color: var(--accent-blue);
+        margin-top: 4px;
+        font-size: 0.85rem;
+      }
+
+      /* FAQ Section */
+      .faq-wrapper {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .faq-item {
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 16px;
+        overflow: hidden;
+        transition: border-color 0.2s ease;
+      }
+
+      .faq-item:hover {
+        border-color: var(--border-active);
+      }
+
+      .faq-item.active {
+        border-color: var(--accent-blue);
+      }
+
+      .faq-trigger {
+        width: 100%;
+        text-align: left;
+        background: none;
+        border: none;
+        padding: 22px 26px;
+        color: var(--text-headline);
+        font-family: 'Plus Jakarta Sans', sans-serif;
+        font-size: 1.05rem;
+        font-weight: 600;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .faq-icon-arrow {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        background: var(--bg-card);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.8rem;
+        color: var(--text-body);
+        transition: transform 0.3s ease;
+        flex-shrink: 0;
+      }
+
+      .faq-item.active .faq-icon-arrow {
+        transform: rotate(180deg);
+        color: #ffffff;
+        background: var(--accent-blue);
+      }
+
+      .faq-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.35s cubic-bezier(0, 1, 0, 1), padding 0.3s ease;
+        padding: 0 26px;
+        color: var(--text-body);
+        font-size: 0.95rem;
+        line-height: 1.7;
+      }
+
+      .faq-item.active .faq-content {
+        max-height: 400px;
+        padding: 0 26px 24px;
+        transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.3s ease;
+      }
+
+      /* Final Call to Action */
+      .final-cta-section {
+        padding-bottom: 120px;
+      }
+
+      .cta-box {
+        background: linear-gradient(135deg, var(--text-headline) 0%, #0F766E 100%);
+        border: 1px solid var(--border-subtle);
+        border-radius: 28px;
+        padding: 68px 36px;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .cta-box::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+        background: linear-gradient(90deg, transparent, var(--accent-amber), var(--accent-blue), transparent);
+      }
+
+      .cta-title {
+        font-size: clamp(2.2rem, 4vw, 3.4rem);
+        color: #D97706;
+        margin-bottom: 18px;
+      }
+
+      .cta-desc {
+        color: var(bar(--text-body));
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto 36px;
+      }
+
+      /* Footer */
+      footer {
+        border-top: 1px solid var(--border-subtle);
+        background: var(--text-headline);
+        padding: 60px 0 36px;
+      }
+
+      .footer-top {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 40px;
+        margin-bottom: 48px;
+        flex-wrap: wrap;
+      }
+
+      .footer-brand p {
+        color: var(--text-muted);
+        font-size: 0.9rem;
+        max-width: 320px;
+        margin-top: 12px;
+      }
+
+      .footer-socials {
+        display: flex;
+        gap: 12px;
+      }
+
+      .social-btn {
+        width: 42px;
+        height: 42px;
+        border-radius: 12px;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        color: var(--text-body);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        transition: all 0.2s ease;
+      }
+
+      .social-btn:hover {
+        color: #D97706;
+        border-color: var(--border-active);
+        transform: translateY(-2px);
+      }
+
+      .footer-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding-top: 28px;
+        color: var(--text-muted);
+        font-size: 0.85rem;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .footer-legal a {
+        color: var(--text-muted);
+        text-decoration: none;
+        margin-left: 20px;
+        transition: color 0.2s ease;
+      }
+
+      .footer-legal a:hover {
+        color: var(--text-headline);
+      }
+
+      /* Registration Modal */
+      .registration-modal {
+        display: none;
+        position: fixed;
+        inset: 0;
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+        padding: 24px;
+        background: rgba(6, 78, 59, 0.62);
+        backdrop-filter: blur(8px);
+      }
+
+      .registration-modal.is-visible {
+        display: flex;
+        animation: modal-fade-in 0.2s ease-out;
+      }
+
+      .registration-dialog {
+        width: min(100%, 520px);
+        max-height: calc(100vh - 48px);
+        overflow-y: auto;
+        background: var(--bg-surface);
+        border: 1px solid var(--border-subtle);
+        border-radius: 24px;
+        box-shadow: 0 24px 70px rgba(6, 78, 59, 0.3);
+        animation: modal-slide-up 0.25s ease-out;
+      }
+
+      .registration-header,
+      .registration-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 24px 28px;
+      }
+
+      .registration-header {
+        border-bottom: 1px solid var(--border-subtle);
+      }
+
+      .registration-title {
+        color: var(--text-headline);
+        font-size: 1.45rem;
+        margin: 0;
+      }
+
+      .registration-close {
+        width: 36px;
+        height: 36px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 10px;
+        background: var(--bg-card);
+        color: var(--text-body);
+        cursor: pointer;
+        font-size: 1rem;
+      }
+
+      .registration-close:hover {
+        color: var(--text-headline);
+        border-color: var(--border-active);
+      }
+
+      .registration-body {
+        padding: 28px;
+      }
+
+      .registration-intro {
+        color: var(--text-body);
+        font-size: 0.92rem;
+        margin-bottom: 22px;
+      }
+
+      .registration-form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 18px;
+      }
+
+      .registration-form-group label {
+        color: var(--text-headline);
+        font-size: 0.85rem;
+        font-weight: 700;
+      }
+
+      .registration-form-group input,
+      .registration-form-group select {
+        width: 100%;
+        padding: 12px 14px;
+        border: 1px solid var(--border-subtle);
+        border-radius: 10px;
+        background: var(--bg-main);
+        color: var(--text-headline);
+        font: inherit;
+        outline: none;
+      }
+
+      .registration-form-group input:focus,
+      .registration-form-group select:focus {
+        border-color: var(--border-active);
+        box-shadow: 0 0 0 3px var(--accent-blue-glow);
+      }
+
+      .registration-footer {
+        justify-content: flex-end;
+        border-top: 1px solid var(--border-subtle);
+      }
+
+      .registration-footer .btn {
+        border: none;
+      }
+
+      @keyframes modal-fade-in {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+
+      @keyframes modal-slide-up {
+        from { opacity: 0; transform: translateY(16px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+
+      body.modal-open {
+        overflow: hidden;
+      }
+
+      /* Responsive Media Queries */
+      @media (max-width: 1024px) {
+        .experience-grid,
+        .speaker-grid,
+        .pillar-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+
+        .about-split {
+          grid-template-columns: 1fr;
+        }
+
+        .pricing-grid {
+          grid-template-columns: 1fr;
+          max-width: 480px;
+          margin: 0 auto;
+        }
+
+        .ticket-card.featured {
+          transform: none;
+        }
+      }
+
+      @media (max-width: 768px) {
+        .nav-links, .nav-cta {
+          display: none;
+        }
+
+        .mobile-toggle {
+          display: block;
+        }
+
+        .hero-stats {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+
+        .hero-meta {
+          flex-direction: column;
+          gap: 8px;
+          border-radius: 16px;
+        }
+
+        .hero-meta .dot {
+          display: none;
+        }
+
+        .experience-grid,
+        .speaker-grid,
+        .pillar-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .timeline-card {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 12px;
+        }
+
+        .timeline-time-col {
+          text-align: left;
+        }
+
+        .timeline-divider {
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Persistent Header -->
+    <header>
+      <div class="container">
+        <div class="nav-inner">
+          <a class="brand" href="#home">
+            <span class="brand-mark">
+              <img src="NEXORA.png" alt="NEXORA Logo" width="32" height="32" />
+            </span>
+            <span class="">NEXORA 2026</span>
+          </a>
+
+          <ul class="nav-links">
+            <li class=""><a class="nav-link active" href="#home">Home</a></li>
+            <li class=""><a class="nav-link" href="#about">About</a></li>
+            <li class=""><a class="nav-link" href="#experience">Experience</a></li>
+            <li class=""><a class="nav-link" href="#speakers">Speakers</a></li>
+            <li class=""><a class="nav-link" href="#schedule">Schedule</a></li>
+            <li class=""><a class="nav-link" href="#pricing">Tickets</a></li>
+            <li class=""><a class="nav-link" href="#faq">FAQ</a></li>
+          </ul>
+
+          <div class="nav-cta">
+            <a class="btn btn-primary" href="#pricing">Register Now</a>
+          </div>
+
+          <button class="mobile-toggle" id="mobileMenuBtn" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section 1 & 2: Centered Hero with Live Countdown -->
+      <section class="hero-section" id="home">
+        <div class="container">
+          <div class="eyebrow-badge">
+            <i class="fa-solid fa-sparkles"></i>
+            Technology, Creativity &amp; Innovation Conference
+          </div>
+
+          <h1 class="hero-title">NEXORA 2026</h1>
+
+          <p class="hero-tagline">Connect Ideas. Create Impact.</p>
+
+          <div class="hero-meta">
+            <span class=""><i class="fa-regular fa-calendar" style="color: var(--accent-amber)"></i> 24 October 2026</span>
+            <div class="dot"></div>
+            <span class=""><i class="fa-solid fa-location-dot" style="color: var(--accent-blue)"></i> Palembang, Indonesia</span>
+          </div>
+
+          <div class="hero-cta-group">
+            <a class="btn btn-primary" href="#registrationModal" data-modal-open="registrationModal">
+              <i class="fa-solid fa-ticket"></i>Register Now
+            </a>
+            <a class="btn btn-secondary" href="#about">
+              Explore Event <i class="fa-solid fa-arrow-down" style="font-size: 0.8rem"></i>
+            </a>
+          </div>
+
+          <!-- Hero Countdown Component -->
+          <div class="hero-countdown-wrapper">
+            <div class="countdown-header">
+              <div class="countdown-title">
+                <span class="live-pulse"></span>
+                Event Countdown
+              </div>
+              <span style="font-size: 0.8rem; color: var(--text-muted); font-weight: 500;" class="">
+                Target: 24 Oct 2026 • 09:00 WIB
+              </span>
+            </div>
+            <div class="countdown-grid" id="countdown">
+              <div class="time-card">
+                <span class="time-num" id="days">32</span>
+                <span class="time-label">Days</span>
+              </div>
+              <div class="time-card">
+                <span class="time-num" id="hours">23</span>
+                <span class="time-label">Hours</span>
+              </div>
+              <div class="time-card">
+                <span class="time-num" id="minutes">12</span>
+                <span class="time-label">Minutes</span>
+              </div>
+              <div class="time-card">
+                <span class="time-num" id="seconds">24</span>
+                <span class="time-label">Seconds</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Centered Stat Counter Highlights -->
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-number">300+</span>
+              <span class="stat-desc">Participants</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-desc">Speakers</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">4</span>
+              <span class="stat-desc">Sessions</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number">1 Day</span>
+              <span class="stat-desc">Full Intensive Experience</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 3: About NEXORA -->
+      <section id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge" style="background: rgba(0,229,255,0.1); border-color: rgba(0,229,255,0.3); color: #72F3FF;">About NEXORA</span>
+            <h2 class="section-title">More Than Just an Event</h2>
+            <p class="section-subtitle">A focused collaborative gathering crafted to help next-generation creators launch real initiatives.</p>
+          </div>
+
+          <div class="about-split">
+            <div class="editorial-card">
+              <div class="about-quote">
+                “NEXORA is designed as an interactive catalyst where students, creators, and engineers turn sparks of curiosity into sustainable impact.”
+              </div>
+              <p class="about-text">
+                Unlike traditional academic symposiums or one-way webinars, NEXORA 2026 brings an immersive, single-day format centered on real peer exchange, active prototype workshops, and honest insights from technology practitioners.
+              </p>
+              <p class="about-text" style="margin-bottom: 0;">
+                Whether you are launching your first startup, designing your next digital product, or mastering modern creative tools, you will find collaborators, mentors, and the exact momentum you need.
+              </p>
+            </div>
+
+            <div class="feature-points">
+              <div class="feature-point-item">
+                <div class="feature-point-icon"><i class="fa-solid fa-compass-drafting"></i></div>
+                <div class="feature-point-text">
+                  <h4 class="">Practical, Not Theoretical</h4>
+                  <p class="">Every talk is paired with actionable methodologies, live demonstrations, and direct takeaways.</p>
+                </div>
+              </div>
+
+              <div class="feature-point-item">
+                <div class="feature-point-icon" style="color: #D97706; background: rgba(217, 119, 6, 0.12);"><i class="fa-solid fa-people-arrows"></i></div>
+                <div class="feature-point-text">
+                  <h4 class="">Curated Networking</h4>
+                  <p class="">Structured match-ups between aspiring creators, student talents, and industry leaders.</p>
+                </div>
+              </div>
+
+              <div class="feature-point-item">
+                <div class="feature-point-icon" style="color: #0D9488; background: rgba(13, 148, 136, 0.12);"><i class="fa-solid fa-certificate"></i></div>
+                <div class="feature-point-text">
+                  <h4 class="">Portfolio &amp; Certification</h4>
+                  <p class="">Verified certificates and opportunities to exhibit tangible prototypes during the idea showcase.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 4: What You'll Experience -->
+      <section id="experience" style="background: rgba(232, 243, 239, 0.55);">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">Event Architecture</span>
+            <h2 class="section-title">What You'll Experience</h2>
+            <p class="section-subtitle">Four distinct program streams calibrated to inspire, educate, and unlock new possibilities.</p>
+          </div>
+
+          <div class="experience-grid">
+            <div class="experience-card">
+              <div class="exp-icon"><i class="fa-solid fa-lightbulb"></i></div>
+              <h4 class="">Insight Session</h4>
+              <p class="">Direct keynote talks and unvarnished panel discussions led by senior practitioners who have scaled real software and creative ventures.</p>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+              <h4 class="">Creative Workshop</h4>
+              <p class="">Tactile, laptop-open collaborative sessions focused on design workflows, product roadmaps, and deploying modern AI models.</p>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-icon"><i class="fa-solid fa-comments"></i></div>
+              <h4 class="">Curated Networking</h4>
+              <p class="">Break the ice with guided table rounds, speed mentorship pods, and peer introductions across technology and creative disciplines.</p>
+            </div>
+
+            <div class="experience-card">
+              <div class="exp-icon"><i class="fa-solid fa-rocket"></i></div>
+              <h4 class="">Idea Showcase</h4>
+              <p class="">A community exhibition hall highlighting forward-thinking student concepts, digital products, and community projects built for impact.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 5: Speakers (With Interactive Category Filtering) -->
+      <section id="speakers">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">Keynote &amp; Mentors</span>
+            <h2 class="section-title">Meet the Voices Behind NEXORA</h2>
+            <p class="section-subtitle">Learn directly from builders actively shaping product design, artificial intelligence, and startup ecosystems.</p>
+          </div>
+
+          <!-- Interactive Filter Tabs -->
+          <div class="filter-bar">
+            <button class="filter-btn active" data-filter="all">All Speakers (4)</button>
+            <button class="filter-btn" data-filter="ai">AI &amp; Tech</button>
+            <button class="filter-btn" data-filter="design">Product Design</button>
+            <button class="filter-btn" data-filter="startup">Startup &amp; Growth</button>
+          </div>
+
+          <div class="speaker-grid" id="speakerGrid">
+            <!-- Speaker 1 -->
+            <div class="speaker-card" data-category="ai">
+              <div class="speaker-avatar speaker-avatar-sw">
+                <img src="WhatsApp Image 2026-09-21 at 13.55.51 (1).jpeg" alt="Dr. Indrawan Nugroho" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+              </div>
+              <span class="speaker-domain">Tech educator</span>
+              <h3 class="speaker-name">Dr. Indrawan Nugroho</h3>
+              <p class="speaker-title">CEO & Co-Founder dari CIAS</p>
+              <div class="speaker-topic-box">
+                <strong>Keynote Topic</strong>
+                Menavigasi masa depan yang didorong teknologi dan inovasi
+              </div>
+            </div>
+
+            <!-- Speaker 2 -->
+            <div class="speaker-card" data-category="design">
+              <div class="speaker-avatar speaker-avatar-rp">
+                <img src="WhatsApp Image 2026-09-21 at 13.55.51.jpeg" alt="Alamanda Shantika" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+              </div>
+              <span class="speaker-domain">Digital Product</span>
+              <h3 class="speaker-name">Alamanda Shantika</h3>
+              <p class="speaker-title">CEO & Founder Binar academy</p>
+              <div class="speaker-topic-box">
+                <strong>Keynote Topic</strong>
+                Membangun produk digital yang berfokus pada kreativitas dan teknologi
+              </div>
+            </div>
+
+            <!-- Speaker 3 -->
+            <div class="speaker-card" data-category="ai">
+              <div class="speaker-avatar speaker-avatar-np">
+                <img src="WhatsApp Image 2026-09-21 at 13.59.57.jpeg" alt="Romi Satria Wahono" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+              </div>
+              <span class="speaker-domain">AI Specialist</span>
+              <h3 class="speaker-name">Romi Satria Wahono</h3>
+              <p class="speaker-title">Ceo Brainmatics Cipta Informatica & Founder dari ilmukomputer.com</p>
+              <div class="speaker-topic-box">
+                <strong>Keynote Topic</strong>
+                Membangun kolaborasi bersama  AI untuk melipatkgandakan kreativitas manusia
+              </div>
+            </div>
+
+            <!-- Speaker 4 -->
+            <div class="speaker-card" data-category="startup">
+              <div class="speaker-avatar speaker-avatar-am">
+                <img src="WhatsApp Image 2026-09-21 at 14.14.522.jpeg" alt="Wiliam Tanuwijaya" style="width: 100%; height: 100%; object-fit: cover; border-radius: 24px;">
+              </div>
+              <span class="speaker-domain">Startup Founder</span>
+              <h3 class="speaker-name">Wiliam Tanuwijaya</h3>
+              <p class="speaker-title">Founder dari tokopedia</p>
+              <div class="speaker-topic-box">
+                <strong>Keynote Topic</strong>
+                Strategi tepat untuk memanfaatkan teknologi dalam membangun startup di era digital
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6: Schedule (Single Day Interactive Timeline) -->
+      <section id="schedule" style="background: rgba(232, 243, 239, 0.55);">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">Program Itinerary</span>
+            <h2 class="section-title">Schedule — Saturday, 24 Oct 2026</h2>
+            <p class="section-subtitle">Seven carefully orchestrated sessions engineered for maximum clarity, practical skill-building, and networking.</p>
+          </div>
+
+          <div class="schedule-wrapper">
+            <!-- Filter Schedule by Session Phase -->
+            <div class="schedule-tabs">
+              <button class="tab-btn active" data-schedule="all">Full Day</button>
+              <button class="tab-btn" data-schedule="morning">Morning (09.00 - 12.30)</button>
+              <button class="tab-btn" data-schedule="afternoon">Afternoon (13.00 - 18.00)</button>
+            </div>
+
+            <div class="timeline-container" id="timelineList">
+              <div class="timeline-card" data-period="morning">
+                <div class="timeline-time-col">
+                  <span class="time">09.00</span>
+                  <span class="duration">60 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Registration &amp; Morning Coffee</h4>
+                  <p class="">Check-in, badge collection, welcome coffee, and informal pre-event greetings in the main atrium.</p>
+                  <span class="timeline-tag">Arrival</span>
+                </div>
+              </div>
+
+              <div class="timeline-card" data-period="morning">
+                <div class="timeline-time-col">
+                  <span class="time">10.00</span>
+                  <span class="duration">50 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Opening &amp; Keynote Address</h4>
+                  <p class="">Opening remarks by NEXORA curators followed by the overarching visionary address on technology momentum.</p>
+                  <span class="timeline-tag" style="color: #72F3FF;">Main Stage</span>
+                </div>
+              </div>
+
+              <div class="timeline-card" data-period="morning">
+                <div class="timeline-time-col">
+                  <span class="time">11.00</span>
+                  <span class="duration">75 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Technology &amp; Design Insight Session</h4>
+                  <p class="">Double feature keynote presentations with Sarah Wijaya and Raka Pratama examining AI workflows and interface principles.</p>
+                  <span class="timeline-tag" style="color: #B45309;">Deep Dive</span>
+                </div>
+              </div>
+
+              <div class="timeline-card" data-period="afternoon">
+                <div class="timeline-time-col">
+                  <span class="time">13.00</span>
+                  <span class="duration">105 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Hands-on Creative Workshop</h4>
+                  <p class="">Breakout rooms for focused group problem-solving: build UI prototypes and integrate API-driven intelligent agents.</p>
+                  <span class="timeline-tag" style="color: #0F766E;">Interactive Lab</span>
+                </div>
+              </div>
+
+              <div class="timeline-card" data-period="afternoon">
+                <div class="timeline-time-col">
+                  <span class="time">15.00</span>
+                  <span class="duration">75 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Idea Showcase &amp; Exhibition Walk</h4>
+                  <p class="">Selected participant prototypes and local student projects presented in a high-energy gallery format with live feedback.</p>
+                  <span class="timeline-tag" style="color: #B45309;">Exhibition</span>
+                </div>
+              </div>
+
+              <div class="timeline-card" data-period="afternoon">
+                <div class="timeline-time-col">
+                  <span class="time">16.30</span>
+                  <span class="duration">60 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Interactive Networking &amp; Mentorship Pods</h4>
+                  <p class="">Curated speed networking rounds paired with speaker office hours to discuss portfolios, careers, and startup ideas.</p>
+                  <span class="timeline-tag" style="color: #72F3FF;">Networking</span>
+                </div>
+              </div>
+
+              <div class="timeline-card" data-period="afternoon">
+                <div class="timeline-time-col">
+                  <span class="time">17.30</span>
+                  <span class="duration">30 mins</span>
+                </div>
+                <div class="timeline-divider"></div>
+                <div class="timeline-content">
+                  <h4 class="">Closing Synthesis &amp; Community Photo</h4>
+                  <p class="">Wrap-up remarks, distribution of digital certificate credentials, and the collective group photograph.</p>
+                  <span class="timeline-tag">Commemoration</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7: Why Join NEXORA (4 Core Pillars) -->
+      <section id="why">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">Foundational Values</span>
+            <h2 class="section-title">Four Pillars That Shape the Experience</h2>
+            <p class="section-subtitle">Every minute of the conference is calibrated around tangible learning, authentic collaboration, and personal growth.</p>
+          </div>
+
+          <div class="pillar-grid">
+            <div class="pillar-card">
+              <span class="pillar-card-num">01</span>
+              <div class="pillar-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+              <h4 class="">Learn</h4>
+              <p class="">Gain unvarnished perspectives from creators who have built and maintained systems under real constraints.</p>
+            </div>
+
+            <div class="pillar-card">
+              <span class="pillar-card-num">02</span>
+              <div class="pillar-icon" style="color: #0D9488; background: rgba(13, 148, 136, 0.12);"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+              <h4 class="">Create</h4>
+              <p class="">Step beyond passive listening with practical workshops where you directly test ideas and build functional artifacts.</p>
+            </div>
+
+            <div class="pillar-card">
+              <span class="pillar-card-num">03</span>
+              <div class="pillar-icon" style="color: #72F3FF; background: rgba(0, 229, 255, 0.12);"><i class="fa-solid fa-handshake-angle"></i></div>
+              <h4 class="">Connect</h4>
+              <p class="">Forge lasting relationships with multidisciplinary peers, potential startup cofounders, and supportive mentors.</p>
+            </div>
+
+            <div class="pillar-card">
+              <span class="pillar-card-num">04</span>
+              <div class="pillar-icon" style="color: #D97706; background: rgba(217, 119, 6, 0.12);"><i class="fa-solid fa-arrow-trend-up"></i></div>
+              <h4 class="">Grow</h4>
+              <p class="">Enrich your portfolio with verified credentials, showcase recognition, and newfound industry clarity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8: Tickets / Registration with Interactive Price Switcher -->
+      <section id="pricing" style="background: rgba(232, 243, 239, 0.55);">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">Passes &amp; Registration</span>
+            <h2 class="section-title">Choose Your Conference Pass</h2>
+            <p class="section-subtitle">Transparent pricing designed for student accessibility while offering rich options for enthusiasts.</p>
+          </div>
+
+          <!-- Group/Student Discount Switcher -->
+          <div class="pricing-toggle-wrap">
+            <span class="">Standard Individual</span>
+            <label class="toggle-switch">
+              <input type="checkbox" id="pricingToggle">
+              <span class="slider"></span>
+            </label>
+            <span class="">Campus Community Bundle <span class="discount-pill">20% OFF</span></span>
+          </div>
+
+          <div class="pricing-grid">
+            <!-- Ticket 1: Student -->
+            <div class="ticket-card">
+              <h3 class="ticket-title">Student Pass</h3>
+              <p class="ticket-subtitle">Designed for active college students and high-schoolers with valid ID.</p>
+              
+              <div class="ticket-price-box">
+                <div class="ticket-price" data-base="25000">Rp25.000 <small>/ seat</small></div>
+              </div>
+
+              <ul class="ticket-features">
+                <li class=""><i class="fa-solid fa-circle-check"></i> Full access to all Keynote &amp; Insight sessions</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Official NEXORA 2026 E-Certificate</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Idea Showcase spectator entry</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Open Networking &amp; Coffee Atrium</li>
+              </ul>
+
+              <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdWsgAaZeA5QL0XX2yg2CCgXFxgP60eKOPSV12hRRD-LbUiDA/viewform?usp=publish-editor ticket=Student+Pass" target="_blank">Select Student Pass</a>
+            </div>
+
+            <!-- Ticket 2: Early Access (Featured) -->
+            <div class="ticket-card featured">
+              <span class="ticket-badge">Most Popular</span>
+              <h3 class="ticket-title">Early Access</h3>
+              <p class="ticket-subtitle">Comprehensive package with hands-on workshop participation included.</p>
+              
+              <div class="ticket-price-box">
+                <div class="ticket-price" data-base="35000">Rp35.000 <small>/ seat</small></div>
+              </div>
+
+              <ul class="ticket-features">
+                <li class=""><i class="fa-solid fa-circle-check"></i> <strong>Guaranteed Creative Workshop Seat</strong></li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Official Digital &amp; Printed Workshop Kit</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Featured Credential Badge on Event App</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Priority access to Mentorship Pods</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Official NEXORA 2026 E-Certificate</li>
+              </ul>
+
+              <a class="btn btn-primary" href="https://docs.google.com/forms/d/e/1FAIpQLSdWsgAaZeA5QL0XX2yg2CCgXFxgP60eKOPSV12hRRD-LbUiDA/viewform?usp=publish-editor ticket=Early+Access" target="_blank">Reserve Early Access</a>
+            </div>
+
+            <!-- Ticket 3: Regular -->
+            <div class="ticket-card">
+              <h3 class="ticket-title">Regular &amp; Pro</h3>
+              <p class="ticket-subtitle">For young professionals, creators, and general technology enthusiasts.</p>
+              
+              <div class="ticket-price-box">
+                <div class="ticket-price" data-base="50000">Rp50.000 <small>/ seat</small></div>
+              </div>
+
+              <ul class="ticket-features">
+                <li class=""><i class="fa-solid fa-circle-check"></i> Full access to all Keynotes &amp; Workshop Labs</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> NEXORA Official Swag &amp; Merchandise Pack</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Lunch &amp; Afternoon Refreshment Box</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Exclusive invite to Speaker Post-Event Mixer</li>
+                <li class=""><i class="fa-solid fa-circle-check"></i> Official NEXORA 2026 E-Certificate</li>
+              </ul>
+
+              <a class="btn btn-secondary" href="https://docs.google.com/forms/d/e/1FAIpQLSdWsgAaZeA5QL0XX2yg2CCgXFxgP60eKOPSV12hRRD-LbUiDA/viewform?usp=publish-editor ticket=Regular+Pass" target="_blank">Choose Regular Pass</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 9: FAQ Accordion -->
+      <section id="faq">
+        <div class="container">
+          <div class="section-header">
+            <span class="eyebrow-badge">Clarifications</span>
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Everything you need to know about venue details, workshop requirements, and ticket policies.</p>
+          </div>
+
+          <div class="faq-wrapper">
+            <div class="faq-item active">
+              <button class="faq-trigger" type="button">
+                <span class="">Siapa saja yang bisa bergabung dalam NEXORA 2026?</span>
+                <span class="faq-icon-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-content">
+                NEXORA terbuka bagi mahasiswa, pelajar SMA/SMK, talenta muda, tech enthusiasts, product designers, serta pemula yang berminat membangun karier atau proyek di bidang teknologi dan industri kreatif. Tidak ada syarat latar belakang pemrograman formal untuk hadir.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-trigger" type="button">
+                <span class="">Apakah seluruh peserta mendapatkan sertifikat resmi?</span>
+                <span class="faq-icon-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-content">
+                Ya. Seluruh pemegang tiket terverifikasi yang mengikuti rangkaian acara berhak memperoleh e-certificate resmi NEXORA 2026 dengan nomor verifikasi unik untuk melengkapi portofolio dan LinkedIn.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-trigger" type="button">
+                <span class="">Apakah tiket sudah termasuk akses ke sesi workshop langsung?</span>
+                <span class="faq-icon-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-content">
+                Tiket kategori <strong>Early Access</strong> dan <strong>Regular</strong> mencakup reservasi kursi di Creative Workshop breakout room berserta workshop kit. Tiket kategori <strong>Student</strong> berfokus pada insight stage, idea exhibition, dan networking umum.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-trigger" type="button">
+                <span class="">Di mana lokasi pasti pelaksanaan acara di Palembang?</span>
+                <span class="faq-icon-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-content">
+                Acara diselenggarakan di pusat auditorium konvensi modern di Palembang, Sumatera Selatan dengan akses transportasi umum mudah. Pengumuman venue spesifik dan panduan parkir/akomodasi dikirimkan melalui email konfirmasi pendaftar.
+              </div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-trigger" type="button">
+                <span class="">Apakah peserta perlu membawa laptop saat acara?</span>
+                <span class="faq-icon-arrow"><i class="fa-solid fa-chevron-down"></i></span>
+              </button>
+              <div class="faq-content">
+                Sangat disarankan untuk membawa laptop pribadi terutama bagi peserta sesi Creative Workshop agar dapat langsung mempraktikkan prototipe dan latihan teknis selama sesi lab.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 10: Final CTA -->
+      <section class="final-cta-section">
+        <div class="container">
+          <div class="cta-box">
+            <span class="eyebrow-badge" style="background: rgba(217, 119, 6, 0.12); color: #B45309;">Ignite Your Momentum</span>
+            <h2 class="cta-title">“Your Next Idea Could Start Here.”</h2>
+            <p class="cta-desc">
+              Join 300+ forward-thinking peers, mentors, and innovators in Palembang on October 24, 2026. Spaces are strictly limited.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 16px; flex-wrap: wrap;">
+              <a class="btn btn-primary" style="padding: 16px 36px; font-size: 1.05rem;" href="#pricing">
+                Secure Your Spot Now <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <a class="btn btn-secondary" style="padding: 16px 30px; font-size: 1.05rem;" href="mailto:contact@nexora2026.id">
+                Contact Organizers
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Registration Modal -->
+    <div class="registration-modal" id="registrationModal" role="dialog" aria-modal="true" aria-labelledby="registrationModalTitle" aria-hidden="true">
+      <div class="registration-dialog">
+        <div class="registration-header">
+          <h2 class="registration-title" id="registrationModalTitle">Register for NEXORA 2026</h2>
+          <button class="registration-close" type="button" data-modal-close aria-label="Close registration form">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <form id="registrationForm">
+          <div class="registration-body">
+            <p class="registration-intro">Secure your place at the technology, creativity, and innovation conference in Palembang.</p>
+            <div class="registration-form-group">
+              <label for="registrationName">Full name</label>
+              <input id="registrationName" name="name" type="text" autocomplete="name" required>
+            </div>
+            <div class="registration-form-group">
+              <label for="registrationEmail">Email address</label>
+              <input id="registrationEmail" name="email" type="email" autocomplete="email" required>
+            </div>
+            <div class="registration-form-group">
+              <label for="registrationTicket">Conference pass</label>
+              <select id="registrationTicket" name="ticket" required>
+                <option value="Student Pass">Student Pass - Rp25.000</option>
+                <option value="Early Access">Early Access - Rp35.000</option>
+                <option value="Regular &amp; Pro">Regular &amp; Pro - Rp50.000</option>
+              </select>
+            </div>
+          </div>
+          <div class="registration-footer">
+            <button class="btn btn-secondary" type="button" data-modal-close>Cancel</button>
+            <button class="btn btn-primary" type="submit">Continue Registration <i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <a class="brand" href="#home">
+              <span class="brand-mark">
+                <img src="NEXORA.png" alt="NEXORA Logo" width="32" height="32" />
+              </span>
+              <span class="">NEXORA 2026</span>
+            </a>
+            <p class="">Technology, Creativity &amp; Innovation Conference in Palembang. Inspiring the next generation of digital creators.</p>
+          </div>
+
+          <div class="footer-socials">
+            <a class="social-btn" href="javascript:void(0)" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a class="social-btn" href="javascript:void(0)" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a class="social-btn" href="javascript:void(0)" aria-label="X"><i class="fa-brands fa-x-twitter"></i></a>
+            <a class="social-btn" href="javascript:void(0)" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <div class="">© 2026 NEXORA Conference. All rights reserved.</div>
+          <div class="footer-legal">
+            <a href="javascript:void(0)" class="">Privacy Policy</a>
+            <a href="javascript:void(0)" class="">Terms of Service</a>
+            <a href="javascript:void(0)" class="">Code of Conduct</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Interactive JavaScript -->
+    <script>
+      // 1. Live Countdown Timer to 24 October 2026 09:00:00 WIB (UTC+7)
+      const targetDate = new Date('2026-10-24T09:00:00+07:00');
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = targetDate - now;
+
+        if (diff <= 0) {
+          document.getElementById('days').textContent = '00';
+          document.getElementById('hours').textContent = '00';
+          document.getElementById('minutes').textContent = '00';
+          document.getElementById('seconds').textContent = '00';
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+        const m = Math.floor((diff / (1000 * 60)) % 60);
+        const s = Math.floor((diff / 1000) % 60);
+
+        document.getElementById('days').textContent = String(d).padStart(2, '0');
+        document.getElementById('hours').textContent = String(h).padStart(2, '0');
+        document.getElementById('minutes').textContent = String(m).padStart(2, '0');
+        document.getElementById('seconds').textContent = String(s).padStart(2, '0');
+      }
+
+      updateCountdown();
+      setInterval(updateCountdown, 1000);
+
+      // Registration modal
+      const registrationModal = document.getElementById('registrationModal');
+      const registrationForm = document.getElementById('registrationForm');
+      const registrationUrl = 'https://docs.google.com/forms/d/e/1FAIpQLSdWsgAaZeA5QL0XX2yg2CCgXFxgP60eKOPSV12hRRD-LbUiDA/viewform?usp=publish-editor';
+
+      function closeRegistrationModal() {
+        registrationModal.classList.remove('is-visible');
+        registrationModal.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('modal-open');
+      }
+
+      document.querySelectorAll('[data-modal-open="registrationModal"]').forEach(trigger => {
+        trigger.addEventListener('click', event => {
+          event.preventDefault();
+          registrationModal.classList.add('is-visible');
+          registrationModal.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('modal-open');
+          document.getElementById('registrationName').focus();
+        });
+      });
+
+      document.querySelectorAll('[data-modal-close]').forEach(closeButton => {
+        closeButton.addEventListener('click', closeRegistrationModal);
+      });
+
+      registrationModal.addEventListener('click', event => {
+        if (event.target === registrationModal) {
+          closeRegistrationModal();
+        }
+      });
+
+      document.addEventListener('keydown', event => {
+        if (event.key === 'Escape' && registrationModal.classList.contains('is-visible')) {
+          closeRegistrationModal();
+        }
+      });
+
+      registrationForm.addEventListener('submit', event => {
+        event.preventDefault();
+        closeRegistrationModal();
+        window.location.href = registrationUrl;
+      });
+
+
+      // 2. Interactive Speaker Category Filter
+      const filterBtns = document.querySelectorAll('.filter-btn');
+      const speakerCards = document.querySelectorAll('.speaker-card');
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          filterBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+
+          const filter = btn.getAttribute('data-filter');
+
+          speakerCards.forEach(card => {
+            if (filter === 'all' || card.getAttribute('data-category') === filter) {
+              card.style.display = 'block';
+              card.style.opacity = '1';
+            } else {
+              card.style.display = 'none';
+              card.style.opacity = '0';
+            }
+          });
+        });
+      });
+
+      // 3. Interactive Schedule Filter (Morning / Afternoon / All)
+      const scheduleTabs = document.querySelectorAll('.tab-btn');
+      const timelineCards = document.querySelectorAll('.timeline-card');
+
+      scheduleTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          scheduleTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+
+          const period = tab.getAttribute('data-schedule');
+
+          timelineCards.forEach(card => {
+            if (period === 'all' || card.getAttribute('data-period') === period) {
+              card.style.display = 'flex';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      });
+
+      // 4. Interactive Pricing Toggle (Individual vs Bundle Discount)
+      const pricingToggle = document.getElementById('pricingToggle');
+      const priceElements = document.querySelectorAll('.ticket-price');
+
+      pricingToggle.addEventListener('change', (e) => {
+        const isBundle = e.target.checked;
+
+        priceElements.forEach(elem => {
+          const base = parseInt(elem.getAttribute('data-base'), 10);
+          const finalPrice = isBundle ? Math.round(base * 0.8) : base;
+          
+          elem.innerHTML = `Rp${finalPrice.toLocaleString('id-ID')} <small>${isBundle ? '/ bundle pass' : '/ seat'}</small>`;
+        });
+      });
+
+      // 5. Accessible FAQ Accordion
+      const faqItems = document.querySelectorAll('.faq-item');
+
+      faqItems.forEach(item => {
+        const trigger = item.querySelector('.faq-trigger');
+        trigger.addEventListener('click', () => {
+          const isActive = item.classList.contains('active');
+          
+          faqItems.forEach(i => i.classList.remove('active'));
+          
+          if (!isActive) {
+            item.classList.add('active');
+          }
+        });
+      });
+
+      // 6. Navigation Active Tracking on Scroll
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      window.addEventListener('scroll', () => {
+        let scrollY = window.pageYOffset;
+
+        sections.forEach(current => {
+          const sectionHeight = current.offsetHeight;
+          const sectionTop = current.offsetTop - 120;
+          const sectionId = current.getAttribute('id');
+
+          if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            navLinks.forEach(link => {
+              link.classList.remove('active');
+              if (link.getAttribute('href') === `#${sectionId}`) {
+                link.classList.add('active');
+              }
+            });
+          }
+        });
+      });
+
+      // 7. Mobile Menu Toggle
+      const mobileBtn = document.getElementById('mobileMenuBtn');
+      const navLinksMenu = document.querySelector('.nav-links');
+
+      mobileBtn.addEventListener('click', () => {
+        const isHidden = getComputedStyle(navLinksMenu).display === 'none';
+        if (isHidden) {
+          navLinksMenu.style.display = 'flex';
+          navLinksMenu.style.flexDirection = 'column';
+          navLinksMenu.style.position = 'absolute';
+          navLinksMenu.style.top = '76px';
+          navLinksMenu.style.left = '0';
+          navLinksMenu.style.right = '0';
+          navLinksMenu.style.background = '#064E3B';
+          navLinksMenu.style.padding = '24px';
+          navLinksMenu.style.borderBottom = '1px solid #243247';
+        } else {
+          navLinksMenu.style.display = 'none';
+        }
+      });
+    </script>
+  
+
+
+
+</body></html>
